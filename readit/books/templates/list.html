@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>my first django html template</title>
+</head>
+<body>
+     {% if request.user.is_authenticated %}
+     <p>Hello {{ request.user.username|title }}, you last login at {{request.user.last_login|date:"D d M Y"}}</p>
+     {% else %}
+     <p>welcome guest</p>
+     {% endif %}
+</body>
+</html>
